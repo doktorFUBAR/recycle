@@ -1,0 +1,894 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+    line-height: 1.3rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #114B5F;
+    background-color: #fcfcfc;
+    width: 100%;
+}
+
+a {
+    cursor: pointer;
+    color: #668C3F;
+}
+
+.greenbold {
+    color: #88D498;
+    font-weight: bold;
+}
+
+/* Getting rid of Safari styles*/
+input {
+    -webkit-appearance: none;
+}
+
+
+/* Styling for the menu */
+
+.menu {
+    width: 100%;
+    height: 100%;
+    transform: translateY(-2000px);
+    background: #1A936F;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: all 0.7s cubic-bezier(1, 0, 0, 1);
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    display: block;
+    line-height: 5rem;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+.hamburger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 9999;
+}
+
+
+.hamburger .fa-bars {
+    font-size: 30px;
+    color: #1A936F;
+    transition: all 1s ease;
+}
+
+
+
+.activepage {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+    padding-top: 5px;
+}
+
+/* Styling for the header */
+
+
+#home-header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../img/bike-sky.jpg) center no-repeat;
+    background-size: cover;
+}
+
+#page-header {
+    height: 80px;
+}
+
+#page-header .logo {
+    color: #4A4A4A;
+}
+
+.logo {
+    font-size: 30px;
+    padding: 1.5rem;
+    float: left;
+    text-transform: uppercase;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.hero {
+    width: 250px;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+.hero h1,
+.intro h1 {
+    font-size: 25px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+
+.hero .btn {
+    margin: 0 auto;
+    background-color: #1A936F;
+    border-radius: 3px;
+}
+
+
+
+.intro {
+    width: 210px;
+    margin: 0 auto;
+    margin-top: 70px;
+    height: 150px;
+    text-align: left;
+}
+
+.intro h1 {
+    text-align: left;
+}
+
+
+/* Styling for the buttons */
+
+.btn-container {
+    display: flex;
+    width: 250px;
+}
+
+.btn {
+    width: 110px;
+    padding: 5px 10px;
+    background-color: #1A936F;
+    border-radius: 3px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.fill {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    background: #ffa010;
+    position: absolute;
+    transition: all .35s ease-Out;
+    bottom: -200px;
+}
+
+
+.btn a {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(36, 36, 36);
+    text-align: center;
+    position: relative;
+    transition: all .35s ease-Out;
+}
+
+/* Styling for the infobox on home-page */
+.home-info {
+    width: 100%;
+    height: 350px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .2);
+}
+
+h2 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.home-info h2 {
+    text-align: center;
+    padding: 1.5rem 3rem;
+}
+
+.home-info p {
+    width: 250px;
+    margin: 0 auto;
+}
+
+.home-info .btn {
+    margin: 20px auto;
+}
+
+/* Styling for tour search form */
+
+.search-tours {
+    width: 100%;
+    height: 350px;
+    margin-top: 30px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .2);
+}
+
+.search-tours form {
+    width: 100%;
+}
+
+
+.search-tours p {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.search-tours select,
+input[type=date] {
+    border: 2px solid #4A4A4A;
+    background: #fcfcfc;
+    height: 35px;
+    width: 200px;
+    border-radius: 0;
+    margin: 25px auto;
+    display: block;
+    font-family: "Raleway", sans-serif;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+input[type=submit] {
+    width: 110px;
+    background-color: #1A936F;
+    padding: 7px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(36, 36, 36);
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+input[type=submit]:hover {
+    background: #ffa010;
+}
+
+/* Styling for the review section */
+
+#review2,
+#review3 {
+    display: none;
+}
+
+.review {
+    height: 460px;
+    color: #fcfcfc;
+    /* text-align: center; */
+    padding-top: 40px;
+    text-align: justify;
+    width: 100%;
+}
+
+#review1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url(../img/bike-mountain.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.review h3 {
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    width: 210px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.reviewer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12;
+    font-style: italic;
+    padding: 10px 0;
+    width: 210px;
+    margin: 0 auto;
+    text-align: center !important;
+}
+
+.review p {
+    width: 210px;
+    text-align: justify;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    width: 260px;
+    margin: 20px auto;
+}
+
+.review-stars {
+    width: 260px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.review-stars .fa,
+.far {
+    padding: 0.3rem;
+    font-size: 20px;
+    color: #ffa010;
+}
+
+.readmore {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #fcfcfc;
+    text-align: center;
+    width: 210px;
+    margin: 0 auto;
+}
+
+.review a {
+    color: #fcfcfc;
+}
+
+.arrows {
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 1.5rem;
+}
+
+.arrows i {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+}
+
+.arrows a {
+    text-decoration: none;
+
+}
+
+/* Styling for the Tours cards */
+
+.tour {
+    margin-top: 60px;
+    height: 840px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 9px 5px -10px rgba(102, 102, 102, 0.15);
+    -moz-box-shadow: 0px 9px 5px -10px rgba(102, 102, 102, 0.15);
+    box-shadow: 0px 9px 5px -10px rgba(102, 102, 102, 0.15);
+}
+
+.tour img {
+    border-radius: 50%;
+    width: 230px;
+    margin: 30px auto;
+}
+
+.tour h2 {
+    width: 210px;
+    text-align: left;
+    margin: 10px auto;
+}
+
+.tour-description {
+    text-align: justify;
+    width: 210px;
+    margin: 10px auto;
+}
+
+.tour-info {
+    width: 210px;
+    text-align: left;
+    margin: 10px auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.tour .btn {
+    margin: 20px auto;
+    margin-bottom: 30px;
+    width: 210px;
+}
+
+iframe {
+    border: none;
+    width: 200px;
+    height: 200px;
+}
+
+.map {
+    margin: 0 auto;
+}
+
+/* Some general styles for the "About paragraphs" */
+
+#aboutus {
+    margin-top: 80px;
+}
+
+#aboutus h1 {
+    font-size: 25px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0 auto;
+}
+
+.paragraph {
+    width: 210px;
+    margin: 40px auto;
+}
+
+#faq {
+    margin-bottom: 100px;
+}
+
+/* Styles for contact page */
+
+.contactus {
+    text-align: left;
+    width: 210px;
+    margin: 0 auto;
+}
+
+.contactus h1 {
+    font-size: 25px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+/* Styling for the mail-form on Contact page */
+
+.mailform {
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    height: 560px;
+    margin: 40px auto 0 auto;
+}
+
+.mailform h2 {
+    text-align: left;
+    width: 210px;
+    margin: 0 auto;
+}
+
+.mailform form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.mailform p {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    width: 200px;
+    margin: 30px auto;
+}
+
+.mailform input[type=email],
+input[type=text] {
+    border: 1px solid #4A4A4A;
+    height: 35px;
+    width: 200px;
+    border-radius: 0;
+    margin: 25px auto;
+    display: block;
+    padding: 5px 10px;
+}
+
+.questionbox input[type=text],
+textarea {
+    border: solid 1px #4A4A4A;
+    margin: 0 auto;
+    width: 210px;
+    height: 100px;
+    padding: 5px 10px;
+}
+
+.mailform .btn {
+    width: 100px;
+    margin: 20px auto 0 auto;
+    float: right;
+}
+
+
+/* Styling for the footer */
+
+.footer-wrapper {
+    background-color: #1A936F;
+    height: 185px;
+    text-align: center;
+    color: #fcfcfc;
+}
+
+footer ul li {
+    display: inline;
+    list-style-type: none;
+    font-size: 30px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fcfcfc;
+    font-size: 21px;
+}
+
+footer i {
+    padding: 0 20px;
+    font-size: 40px;
+    cursor: pointer;
+    display: inline;
+    text-align: center;
+    text-decoration: none;
+}
+
+footer h2 {
+    padding-top: 20px;
+    text-decoration: underline;
+    text-transform: none;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 12px;
+}
+
+/* Media queries for desktop/larger screen sizes */
+
+@media screen and (min-width: 1025px) {
+
+    /*Styling for the header and navigation */
+    .hamburger {
+        display: none;
+    }
+
+    .menu {
+        flex-direction: row;
+        width: 100%;
+        height: 40px;
+        position: static;
+        background-color: transparent;
+        transform: translateY(0px);
+        top: 0;
+        margin: 0;
+    }
+
+    #page-header a {
+        color: #4A4A4A;
+    }
+
+    #page-header .activepage {
+        border-bottom: 2px solid #4A4A4A;
+    }
+
+    .logo {
+        cursor: pointer;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header li {
+        padding: 1rem 40px;
+    }
+
+    .menu a {
+        line-height: 0;
+        border-bottom: none;
+    }
+
+    .menu li a {
+        transition: all 0.3s ease 0s;
+    }
+
+    .menu li a:hover {
+        font-weight: bold;
+    }
+
+    /* Styling for the hero and intro*/
+    .hero {
+        margin-top: 150px;
+        width: 500px;
+        height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+
+
+    .btn:hover .fill {
+        bottom: 0;
+    }
+
+    .intro {
+        width: 280px;
+    }
+
+    /*Styling for the main content on home page */
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 450px;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+    }
+
+    .home-info {
+        height: inherit;
+        width: 70vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .info-container {
+        width: 500px;
+        margin: auto;
+    }
+
+    .home-info h2 {
+        width: 500px;
+        margin: 40px auto auto 0;
+        padding: 40px 0;
+        text-align: left;
+    }
+
+    .home-info p {
+        width: 500px;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    .home-info .btn {
+        margin: 20px auto;
+        float: right;
+    }
+
+    .search-tours {
+        height: 450px;
+        margin: 0;
+        width: 30vw;
+    }
+
+    .form-container {
+        width: 200px;
+        height: 400px;
+        margin: 0 auto;
+    }
+
+    .search-tours h2 {
+        margin-top: 80px;
+    }
+
+    .search-tours input[type=submit] {
+        float: right;
+    }
+
+    /* Styling for the reviews */
+
+    #review1 {
+        background: none;
+    }
+
+    .review-container {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url(../img/bike-mountain-large.jpg) center no-repeat;
+        background-size: cover;
+        width: 100vw;
+        display: flex;
+
+    }
+
+    #review2,
+    #review3 {
+        display: block;
+    }
+
+
+    /* Removing and fixing review arrows */
+
+    #review1 .right-arrow {
+        display: none;
+    }
+
+    #review2 .left-arrow {
+        display: none;
+    }
+
+    #review2 .right-arrow {
+        display: none;
+    }
+
+    #review3 .left-arrow {
+        display: none;
+    }
+
+    #review3 .right-arrow {
+        position: absolute;
+        right: 0;
+        padding-right: 1.5rem;
+    }
+
+    /* Styling for the tour cards */
+    .flex-container2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 940px;
+    }
+
+    .tour {
+        width: 100%;
+        box-shadow: none;
+        margin-right: 5rem;
+    }
+
+    /* Styling for the about us page */
+    .about-container {
+        width: 50vw;
+        margin: 200px auto 0 auto;
+        text-align: justify;
+    }
+
+    .paragraph {
+        width: 400px;
+    }
+
+    /* Styling for the the contact page */
+
+    .contactus {
+        margin-top: 150px;
+    }
+
+    .mailform {
+        width: 300px;
+        height: 560px;
+        margin: 80px auto 40px auto;
+    }
+
+    .mailform p {
+        width: 300px;
+    }
+
+    .mailform input[type=email],
+    input[type=text] {
+        width: 300px;
+    }
+
+    .questionbox input[type=text],
+    textarea {
+        width: 300px;
+        height: 150px;
+        resize: none;
+    }
+
+    .mailform .btn {
+        width: 100px;
+        margin: 20px auto 0 auto;
+    }
+
+    /* icon hover */
+    i:hover {
+        opacity: 0.7;
+        transition: all 0.4s ease 0s;
+
+    }
+}
+
+/*Query for tablets */
+
+@media (min-width: 768px) and (max-width: 1280px) {
+
+    /* Styling for the tour cards */
+    .flex-container2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 940px;
+    }
+
+    .tour {
+        width: 200px;
+        box-shadow: none;
+        margin-right: 40px;
+    }
+
+    .tour img {
+        width: 180px;
+    }
+
+    /* Changing width for the paragraphs on the About page */
+    .paragraph {
+        width: 400px;
+    }
+}
